@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background-color: aliceblue;
+                color: #0d1d3a;
+            }
+
+            .navbar {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                background-color: darkblue;
+                padding: 20px 80px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            .logo {
+                color: white;
+                font-weight: 700;
+                font-size: 24px;
+                height: 60px;
+                width:60px;
+            }
+
+            .logo h2{
+                padding-top: 10px;
+            }
+            .navbar nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 30px;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+            .navbar nav a:hover{
+                color:#ffcc00;
+            }
+
+            #home {
+               
+                display: flex;
+                align-items: center;
+            }
+
+            .hero{
+                width: 100%;
+                height: 60vh;
+                margin-top: 100px;
+                padding-right: 100px;
+                margin-bottom: 20px;
+                padding-bottom: 30px;
+            }
+
+            .hero h3 {
+                color:#0d1d3a;
+                font-size: 18px;
+                margin-bottom: 20px;
+                padding-top: 0px;
+                margin-left: 100px;
+                margin-top: -340px;
+            }
+
+            .hero h1 {
+                color: #0d1d3a;
+                font-weight: 600;
+                line-height: 1.1;
+                 margin-left: 100px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+                color: #0d1d3a;
+                font-weight: 600px;
+                margin-bottom: 20px;
+                 margin-left: 100px;
+            }
+
+            .hero h4 {
+                font-size: 22px;
+                color:#0d1d3a;
+                font-weight: 600;
+                margin-left: 100px;
+                margin-bottom: 5px;
+               }
+
+            .hero p{
+                max-width: 540px;
+                font-size: 20px;
+                line-height: 1.7;
+                color:#0d1d3a;
+                margin-bottom: 40px;
+                 margin-left: 100px;
+                 padding-top: 10px;
+            }
+
+            .btn {
+                background-color: blue;
+                color:white;
+                padding: 14px 32px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: 0.3s;
+                display: inline-block;
+                 margin-left: 230px;
+            }
+
+            .btn:hover {
+                transform: translateY(-3px);
+            }
+
+
+            #skills {
+                background: linear-gradient(rgba(25, 71, 161,0.9),rgba(2, 14, 70, 0.98));
+                height: 300px;
+                color:#fff;
+                text-align: center;
+                margin-top: -10px;
+            }
+
+
+            .skills-grid {
+                display:grid;
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 50px;
+                }
+
+            
+            .skill-card {
+                background-color: #fff;
+                padding: 25px;
+                text-align: center;
+                border-radius: 10px;
+                border: 1px solid rgba(100,255,218,0.1);
+                transition: 0.3s;
+                margin-top: 30px;
+                width:150px;
+                margin-left: 10px;
+            }
+
+            .skill-card:hover {
+                transform: translateY(-5px);
+                border-color: #fff;
+            }
+
+            .skill-card h4 {
+                color:black;
+                margin-bottom: 8px;
+                padding-top: 20px;
+            }
+
+            .section-title {
+                text-align: center;
+                padding-top: 30px;
+                font-size: 30px;
+                color:white;
+                margin-top: 50px;
+                gap: 30px;
+            }
+
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap:30px;
+                align-items: center;
+                padding-top: 30px;
+            }
+
+            .project-card img {
+                height:200px;
+                width:300px;
+                object-fit: contain;
+                border-radius: 10px;
+            }
+
+            .project-card{
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                transition: 0.3s;
+                border-left: 7px solid #0d1d3a;
+                width: 350px;
+                margin-left: 5px;
+                align-items: center;
+            }
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            }
+
+            .project-card h4{
+                font-size: 20px;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .project-card p,a{
+                text-align: center;
+             padding-top:10px;
+
+            }
+            
+            #projects {
+                background: linear-gradient(rgba(25, 71, 161,0.9),rgba(2, 14, 70, 0.98));
+                height: 1400px;
+            }
+
+            #resume {
+                text-align: center;
+                background: linear-gradient(rgba(25, 71, 161,0.9),rgba(2, 14, 70, 0.98));
+                text-decoration: none;
+                height: 40vh;
+            }
+
+            #resume p{
+                max-width: 600px;
+                margin: 0 auto 30px;
+                color: #fff;
+                font-size: 20px;
+                height:90px;
+                padding-top: 20px;
+            }
+
+            #resume h2{
+                text-align: center;
+                color:white;
+            }
+
+            #resume h5{
+                 font-size: 25px;
+                padding-bottom: 27px;
+                color: #03020e;
+                text-decoration: none;
+               }
+
+            #resume h5:hover {
+                color:rgb(250, 248, 245);
+                text-decoration: none;
+               
+            }
+
+            .btn-download{
+                display: inline-block;
+                background-color: #ffcc00;
+                height: 40px;
+                color: #0d1d3a;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 5px;
+                padding: 5px ;
+                 }
+
+                 .contact-wrapper {
+                    display:flex;
+                    gap: 50px;
+                    flex-wrap: wrap;
+                    background: linear-gradient(rgba(25, 71, 161,0.9),rgba(2, 14, 70, 0.98));
+                 }
+
+                 .contact-info {
+                    flex:1;
+                    min-width: 300px;
+                    padding-left:100px;
+                    padding-top: 90px;
+                    font-size: 23px;
+                    font-weight: 500;
+                    color:white;
+                 }
+
+                 .contact-info h3 {
+                    color: white;
+                    margin-bottom: 20px;
+                    font-size: 25px;
+                 }
+
+                 .contact-info p {
+                    margin-bottom: 15px;
+                    color:white;
+                 }
+
+                 .contact-form {
+                    flex:1.5;
+                    min-width: 300px;
+                 }
+
+                 .contact-form p{
+                 color: aliceblue;
+                 }
+                 .contact-form input, .contact-form textarea{
+                    width:70%;
+                    padding:15px;
+                    margin-bottom: 20px;
+                    background-color: #fff;
+                    border: 1px solid #233554;
+                    border-radius: 5px;
+                    color:#080808;
+                    font-size: 15px;
+                 }
+
+                 .contact-form h3 {
+                    margin-left: 180px;
+                    padding-top: 15px;
+                    color:white;
+                    font-weight: 500;
+                    font-size: 25px;
+                 }
+
+              .contact-form button {
+                    background-color: #ffcc00;
+                    color:white;
+                    padding: 14px 35px;
+                    border:none;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    font-size: 15px;
+                    margin-left: 160px;
+                 
+                 }
+
+                 .section-title2 {
+                    background-color:rgba(25, 71, 161,0.9);
+                    color:white;
+                    height: 70px;
+                    text-align: center;
+                    padding-top: 15px;
+                    font-size: 30px;
+                    margin-top: 50px;
+                 }
+
+                 .footer{
+                    background-color: rgba(2, 14, 70, 0.98);
+                    text-align: center;
+                    padding: 30px;
+                    color:white;
+                    border-top: 1px solid #233554;
+                 }
+
+                 .project-card h6{
+                    font-size: 20px;
+                    color:#080808;
+                    padding-top: 10px;
+                    text-decoration: none;
+                 }
+
+               .profile-img{
+               width: 300px;
+               height: 300px;
+               border-radius: 50%;
+               object-fit: cover;
+               overflow: hidden;
+               margin-left: 800px;
+                 border: 4px solid #050763;
+                box-shadow: 0 0 20px rgba(96, 10, 235, 0.3);
+               }
+          
+        </style>
+               
+    </head>
+    <body>
+
+        <header class="navbar">
+            <div class="logo">
+                <h2>PORTFOLIO</h2>
+              </div>
+
+            <nav>
+                <a href="#index.html">HOME</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#resume">RESUME</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+
+        <section id="home">
+            <div class="hero">
+                <div class="profile-img">
+                   <img src="PHOTO1.jpg">
+                </div>
+                
+                <h3>Hi, I am  </h3>
+                <h1>RAKHI</h1>
+                <h2>Associate Software Engineer</h2>
+                <h4> MI Web Tech pvt ltd.</h4>
+                <p>I am a web developer and UI designer based in India. I specialize in creating beautiful, fast, and responsive websites</p>
+                <p>Currently focused on building designer and interactive and attractive webpages</p>
+
+                <div class="btn-group">
+                    <a href="#projects" class="btn">view my work</a>
+
+                 
+
+            </div>
+        </section>
+        
+        
+
+        <section id="skills">
+            <h2 class="section-title"><span>02.</span> Technical Skills</h2>
+            
+
+            <div class="skills-grid">
+                <div class="skill-card"><h4>HTML5</h4></div>
+
+                <div class="skill-card"><h4>CSS3</h4></div>
+
+                <div class="skill-card"><h4>JavaScript</h4></div>
+
+                <div class="skill-card"><h4>Git & Github</h4></div>
+
+                <div class="skill-card"><h4>Responsive Design</h4></div>
+
+                <div class="skill-card"><h4>Angular</h4></div>
+            </div>
+        </section>
+        <hr>
+
+
+        <section id="projects">
+            <h2 class="section-title"><span>03.</span>Project Showcase</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="software career page.jpeg">
+                <h4>Software Development Company</h4>
+                <p>I made a fully responsive career section for the software development company website. I built it using HTML CSS and JS</p>
+                <a href="https://govardhankosuri.github.io/SD_Company_Website/careersection.html"><h6>Career Section</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="videotestimonial.jpeg">
+                <h4>Landing Page</h4>
+                <p>I developed a fully responsive video testimonial page for the landing page. I built it using html and css</p>
+            <a href="https://seela-chaithanya-sai.github.io/Landing-Page/videotestimonials.html"><h6>Video Testimonial</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="homepage.jpeg">
+                <h4>E-Commerce Website</h4>
+                <p>I developed a responsive and attractive home page for the E commerce website. I built it using HTML and CSS</p>
+                 <a href="https://swathygandham390-cloud.github.io/Musical_hubs/index.html"><h6>Home page</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="about us.jpeg">
+                <h4>Consultancy Services Webpage</h4>
+                <p>I developed an appealing and attractive about us page for the consultancy services webpage. I built it using HTML and CSS.</p>
+                <a href="https://rakhinagrale18.github.io/Consultancy-Webpage/aboutus.html"><h6>About Us</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="testimonial.jpeg">
+                <h4>Business Portfolio Website</h4>
+                <p>I developed client testimonials page for the business portfolio website. I built it using HTML and CSS.</p>
+                <a href="https://fathima14shaik-del.github.io/Simple-Studio/testimonials.html"><h6>Client Testimonial</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="aboutus2.jpeg">
+                <h4>Training Institute Website</h4>
+                <p>I built Informative About Us page for the Training Institute Website. I developed it using HTML and CSS. </p>
+                <a href="https://govardhankosuri.github.io/Training_Institute/aboutus.html"><h6>About Us</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="department.jpeg">
+                <h4>College Website</h4>
+                <p>I built an informative Department page for the college website. I built it using HTML CSS & JS</p>
+                <a href="https://rakhinagrale18.github.io/College-Website/department.html"><h6>Department</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="inquiryform.jpeg">
+                <h4>Construction Company Website</h4>
+                <p>I built a responsive inquiry form for the construction company website. I built it using HTML CSS and JS</p>
+                <a href="https://pavan9966.github.io/Construction-Company/inquiry.html"><h6>Inquiry Form</h6></a>
+            </div>
+
+            <div class="project-card">
+                <img src="online courses.jpeg">
+                <h4>Online Courses Website</h4>
+                <p>I built a contact form for the online courses website. I developed it using HTML CSS and JS</p>
+                <a href="https://swathygandham390-cloud.github.io/online_course/contact.html"><h6>Contact Page</h6></a>
+            </div>
+        </div>
+        </section>
+        <hr>
+
+        <section id="resume">
+            <h2 class="section-title"><span>04.</span>My Resume</h2>
+            <p>Download my resume to get detailed information about my experience, education and skills.</p>
+            <a href="RakhiNagraleCV(updated).pdf" class="btn-download"><h5>Download Resume</h5></a>
+        </section>
+        <hr>
+
+
+        <section id="contact">
+            <h2 class="section-title2"><span>05.</span>Get In Touch</h2>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <p>Email: rakhinagrale18@gmail.com</p>
+                    <p>Phone: 9022174250</p>
+                    <p>Location: Nagpur, Maharashtra</p>
+                    <p>Github: github.com/rakhinagrale18</p>
+                    
+                </div>
+
+                <div class="contact-form">
+                    <h3>Inquiry form</h3>
+                    <form>
+                       <p>Name:</p>
+                        <input type="text" placeholder="enter your name" required>
+                        <br>
+
+                     <p>Email:</p>
+                       <input type="email" placeholder="enter your email" required>
+                       
+                       <p>Message:</p>
+                        <textarea rows="5" placeholder="type your message" required></textarea>
+
+                       <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Designed and Build by Rakhi &copy; 2026</p>
+        </footer>
+    </body>
+</html>
